@@ -1,0 +1,24 @@
+{{- if .Values.route.enabled }}
+apiVersion: v1
+kind: Route
+metadata:
+  name: {{ .Values.appName }}
+spec:
+  host: {{ .Values.route.host }}
+  {{- if .Values.route.path }}
+  path: {{ .Values.route.path }}
+  {{- end }}
+  to:
+    kind: Service
+    name: {{ .Values.appName }}
+  {{- if and .Values.route.key .Values.route.certificate .Values.route.caCertificate }}
+  tls:
+    termination: edge
+    key: |-
+      {{ .Values.route.key | nindent 6 }}
+    certificate: |-              
+      {{ .Values.route.certificate | nindent 6 }}
+    caCertificate: |-            
+      {{ .Values.route.caCertificate | nindent 6 }}
+  {{- end }}
+{{- end -}}

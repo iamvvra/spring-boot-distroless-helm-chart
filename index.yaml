@@ -1,0 +1,14 @@
+apiVersion: v1
+entries:
+  spring-boot-distroless-jib:
+  - apiVersion: v2
+    appVersion: 0.0.1-SNAPSHOT
+    created: "2020-04-14T19:47:07.110439+05:30"
+    description: A Helm chart for spring boot backend service
+    digest: a15d109dfef057b491a6d41c58a59488a6fbccbb71f008d231d8ab2247076d4f
+    name: spring-boot-distroless-jib
+    type: application
+    urls:
+    - https://iamvvra.github.io/demo-helm-repo/spring-boot-distroless-jib-0.0.1.tgz
+    version: 0.0.1
+generated: "2020-04-14T19:47:07.109497+05:30"
