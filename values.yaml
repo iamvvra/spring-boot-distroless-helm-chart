@@ -20,7 +20,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 env:
-  propertyFile: "config/application.properties"
+  propertyFile: "config/application.yaml"
   configMap:
     JAVA_OPTS: -Dspring.config.location=/opt/appConfig/application-qa.properties -Dspring.profiles.active=qa -Dspring.hikaricp.config.location=/opt/appConfig/
   secrets:

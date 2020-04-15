@@ -36,12 +36,12 @@ spec:
             {{- toYaml .Values.resources | nindent 12 }}
           volumeMounts:
           - name: application-config
-            mountPath: "/deployments/config"
+            mountPath: "/config"
             readOnly: true
       volumes:
       - name: application-config
         configMap:
           name: {{ template "app.fullname" . }}
           items:
-          - key: application.properties
-            path: application.properties
+          - key: {{ (split "/" .Values.env.propertyFile)._0 }} 
+            path: {{ (split "/" .Values.env.propertyFile)._0 }} 
