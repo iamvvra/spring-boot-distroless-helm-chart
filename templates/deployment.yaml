@@ -34,3 +34,14 @@ spec:
               protocol: TCP
           resources:
             {{- toYaml .Values.resources | nindent 12 }}
+          volumeMounts:
+          - name: application-config
+            mountPath: "/deployments/config"
+            readOnly: true
+      volumes:
+      - name: application-config
+        configMap:
+          name: {{ template "app.fullname" . }}
+          items:
+          - key: application.yaml
+            path: application.yaml

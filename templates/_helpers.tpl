@@ -58,6 +58,9 @@ other labels
 {{- define "..appLabels" -}}
 app.kubernetes.io/part-of: {{ .Values.partOf }}
 app.kubernetes.io/component: {{ .Values.type }}
+{{- if .Values.commitId }}
+commitId: {{ .Values.commitId }}
+{{- end }}
 {{- end -}}
 
 {{/*
