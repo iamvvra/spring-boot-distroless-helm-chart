@@ -5,7 +5,7 @@
 replicaCount: 1
 namespace: dev
 appName: spring-boot-distroless-jib
-commitId: master/122aa08
+commitId: "master-122aa08"
 type: backend
 partOf: bank-payments
 version: 0.0.1-SNAPSHOT
@@ -20,7 +20,7 @@ nameOverride: ""
 fullnameOverride: ""
 
 env:
-  propertyFile: "config/application.yml"
+  propertyFile: "config/application.properties"
   configMap:
     JAVA_OPTS: -Dspring.config.location=/opt/appConfig/application-qa.properties -Dspring.profiles.active=qa -Dspring.hikaricp.config.location=/opt/appConfig/
   secrets:

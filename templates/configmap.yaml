@@ -1,0 +1,10 @@
+{{- $filename := .Values.env.propertyFile -}}
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ template "app.fullname" . }}
+  labels:
+    {{- include "..labels" . | nindent 4 }}
+data: 
+  {{ regexFind "[^/]+$" (printf "%s" .Values.env.propertyFile) -}}: |-
+  {{- .Files.Get (printf "%s" .Values.env.propertyFile ) | nindent 4 -}}
