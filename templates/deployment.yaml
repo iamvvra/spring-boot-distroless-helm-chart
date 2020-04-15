@@ -43,5 +43,5 @@ spec:
         configMap:
           name: {{ template "app.fullname" . }}
           items:
-          - key: application.yaml
-            path: application.yaml
+          - key: application.properties
+            path: application.properties
