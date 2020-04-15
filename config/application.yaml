@@ -1,2 +1,2 @@
 app:
-  message: hello-helm-from-config-map-new-value
+  message: hello-helm-live
