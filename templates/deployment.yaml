@@ -43,5 +43,5 @@ spec:
         configMap:
           name: {{ template "app.fullname" . }}
           items:
-          - key: {{ (split "/" .Values.env.propertyFile)._0 }} 
-            path: {{ (split "/" .Values.env.propertyFile)._0 }} 
+          - key: {{ (split "/" .Values.env.propertyFile)._1 }} 
+            path: {{ (split "/" .Values.env.propertyFile)._1 }}
