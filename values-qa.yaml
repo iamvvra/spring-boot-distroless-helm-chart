@@ -8,7 +8,7 @@ appName: spring-boot-distroless-jib
 commitId: "master-122aa08"
 type: backend
 partOf: bank-payments
-version: 0.0.1-SNAPSHOT
+version: 0.0.1-0e10c7a
 
 image:
   repository: vijayraghavan08/spring-boot-distroless-jib
