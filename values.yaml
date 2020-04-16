@@ -13,7 +13,7 @@ version: 0.0.1
 image:
   repository: vijayraghavan08/spring-boot-distroless-jib
   pullPolicy: IfNotPresent
-  tag: 0.0.1
+  tag: 0.0.1-0e10c7a
 
 imagePullSecrets: []
 nameOverride: ""
